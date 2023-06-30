@@ -33,7 +33,8 @@ const Wrapper = styled.div`
   align-items: center;
 
   @media (max-width: 600px) {
-    height: 315px;
+    height: auto;
+    min-height: 315px;
     padding: 24px;
   }
 `;
@@ -58,6 +59,10 @@ const Advice = styled.p`
 
   &::after {
     content: "”";
+  }
+  @media (max-width: 600px) {
+    maargin-top: 12px;
+    font-size: 1.5rem;
   }
 `;
 

@@ -32,7 +32,8 @@ const Wrapper = styled.div`
 
   @media (max-width: 600px) {
     width: 343px;
-    height: 315px;
+    height: auto;
+    min-height: 315px;
     padding: 24px;
   }
 `;
