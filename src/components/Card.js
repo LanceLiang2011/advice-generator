@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   box-shadow: 30px 50px 80px rgba(0, 0, 0 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   @media (max-width: 600px) {
@@ -44,6 +44,7 @@ const Header = styled.p`
   font-size: 0.8125rem;
   letter-spacing: 4px;
   font-weight: 900;
+  margin: -24px;
 `;
 const Advice = styled.p`
   color: ${COLORS.lightCyan};
