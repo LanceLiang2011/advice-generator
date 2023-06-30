@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { styled } from "styled-components";
+import Card from "./components/Card";
+import { useState } from "react";
+import { INIT_ADVICE } from "./utils/props";
 
 function App() {
+  const [data, setData] = useState(INIT_ADVICE);
+  const fetchAdvice = async () => {
+    let randomNumber = Math.floor(Math.random() * 200) + 1;
+    const res = await fetch(
+      `https://api.adviceslip.com/advice/${randomNumber}`
+    );
+    const json = await res.json();
+    setData(json);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Wrapper>
+        <Card onClick={fetchAdvice} id={data?.slip?.id ?? 0}>
+          {data?.slip?.advice ?? "Advice no found"}
+        </Card>
+      </Wrapper>
     </div>
   );
 }
+
+const Wrapper = styled.div`
+  width: 540px;
+  height: 364px;
+  margin: 223px auto;
+
+  @media (max-width: 600px) {
+    width: 343px;
+    height: 315px;
+    padding: 24px;
+  }
+`;
 
 export default App;
