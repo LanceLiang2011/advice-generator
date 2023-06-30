@@ -27,7 +27,7 @@ function App() {
 
 const Wrapper = styled.div`
   width: 540px;
-  height: 364px;
+  height: 332px;
   margin: 223px auto;
 
   @media (max-width: 600px) {

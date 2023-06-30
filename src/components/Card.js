@@ -22,7 +22,7 @@ export default function Card({ id, children, onClick }) {
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 364px;
+  height: 332px;
   padding: 48px;
   background: ${COLORS.darkGrayishBlue};
   border-radius: 15px;
