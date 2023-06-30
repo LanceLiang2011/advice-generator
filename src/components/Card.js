@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   box-shadow: 30px 50px 80px rgba(0, 0, 0 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 
   @media (max-width: 600px) {
