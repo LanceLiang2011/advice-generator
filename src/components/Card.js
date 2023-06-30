@@ -10,8 +10,8 @@ export default function Card({ id, children, onClick }) {
     <Wrapper>
       <Header>advice #{id}</Header>
       <Advice>{children}</Advice>
-      <ImgLine src={lineDesk} />
-      <MobileLine src={lineMobile} />
+      <ImgLine alt="line" src={lineDesk} />
+      <MobileLine alt="line" src={lineMobile} />
       <Button onClick={onClick}>
         <img src={dice} alt="dice" />
       </Button>
