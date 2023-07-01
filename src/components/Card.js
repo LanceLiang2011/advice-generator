@@ -99,8 +99,7 @@ const Button = styled.button`
   color: ${COLORS.darkBlue};
   background: ${COLORS.neonGreen};
 
-  &:hover,
-  &:focus {
+  &:hover {
     box-shadow: 0px 0px 40px #53ffaa;
   }
 
